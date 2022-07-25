@@ -18,9 +18,7 @@
 
 .mainbox {
     background-color: rgb(32, 31, 31);
-    
-    background-color: rgba(0, 0, 0, 0.719);
-   
+    background-color: rgba(0, 0, 0, 0.790);
     color: white;
     font-weight: bold;
     border: 3px solid #f1f1f1;
@@ -29,8 +27,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
-    width: 50%;
-    height: 70%;
+    width: 30%;
+    height: auto;
     padding: 20px;
     text-align: center;
     display: flex;
@@ -38,18 +36,6 @@
     align-items: center;
     border-radius: 20px;
     flex-direction: column;
-    margin-top: 0.5rem
-}
-
-#input1 {
-    border-radius: 10px;
-    padding: 5px;
-    font-size: 20px;
-    border: 3px solid purple;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: wheat;
-    margin-bottom: 1rem;
-
 }
 
 .searchdiv {
@@ -57,22 +43,46 @@
     
 }
 
+#input1 {
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 20px;
+    border: 3px solid rgba(0, 0, 255, 0.579);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    margin-bottom: 1rem;
+
+}
+
 #btn {
-    width: 30px;
+    width: 40px;
     height: 40px;
     margin-left: 10px;
     border-radius: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 3px solid rgba(0, 0, 255, 0.579);
+    cursor: pointer;
+    
 }
 
 #icon {
-    padding: 4px;
-    padding-left: 1px;
+    padding: 1px;
+   
+    width: 20px;
 }
+
+
 
 .temp {
     color: gray;
     font-size: 3rem;
     margin-top: 1rem;
+}
+
+.other{
+    color: gray;
+    font-size: 1.5rem;
+    margin-top: 0.2rem;
 }
 
 #weatherinfo {

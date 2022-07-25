@@ -1,14 +1,16 @@
+// grab the html elements
 const imgbox = document.getElementById("input");
 const tempbox = document.getElementById("temp");
 const weatherinfo = document.getElementById("weatherinfo");
-var img = document.getElementById("myImg");
+const humidity = document.getElementById("humidity")
+const cloudPercent = document.getElementById("cloud%")
+const windSpeed = document.getElementById("wind")
 const btn = document.getElementById("btn");
 let val = document.getElementById("input1");
+var img = document.getElementById("myImg");
 
-
-
-
-const getweather = {
+//api key's 
+const keys = {
   method: "GET",
   headers: {
     "X-RapidAPI-Key": "22247dff10mshad88d7d49ec5f8fp1f29b1jsn644ba66f1e41",
@@ -16,12 +18,10 @@ const getweather = {
   },
 };
 
-
-
-
-const  getdata = async () => {
+//function that fetch data
+const  getweather = async () => {
     const city = val.value
-    const data = await fetch(`https://weatherapi-com.p.rapidapi.com/current.json?q=${city}`,getweather)
+    const data = await fetch(`https://weatherapi-com.p.rapidapi.com/current.json?q=${city}`, keys)
         .then(response => response.json())
 
     
@@ -32,29 +32,21 @@ const  getdata = async () => {
     const humiduty = data.current.humidity
     const cloud = data.current.cloud
     const windInKph = data.current.wind_kph
-    const windDir = data.current.wind_dir
-    const preassure = data.current.pressure_mb
+    
 
-    // console.log(
-    //     `
-    //     ${tempInC}
-    //     ${howIsWeather}
-    //     ${humiduty}
-    //     ${cloud}
-    //     ${windInKph}
-    //     ${windDir}
-    //     ${preassure}
-
-    //     `
-    // )
-    tempbox.innerHTML = `${tempInC}  &#8451`
+    
+    tempbox.innerHTML = `${tempInC} &nbsp  &#8451`
+    humidity.innerHTML= `&#127777  &nbsp  ${humiduty} `
+    cloudPercent.innerHTML = `&#9729 &nbsp ${cloud}`
+    windSpeed.innerHTML = `&nbsp &nbsp  &nbsp &nbsp &#128168 &nbsp ${windInKph} kph`
     weatherinfo.innerHTML = howIsWeather
     img.src = icon
 
 }
 
+
+// button click listenr to fetch ans show data
 btn.addEventListener("click" , () => {
-    console.log(val.value)
-    getdata()
+  getweather()
 })
 
