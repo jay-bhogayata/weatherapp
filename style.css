@@ -54,6 +54,7 @@
 
 .searchdiv {
     display: flex;
+    
 }
 
 #btn {
@@ -65,6 +66,7 @@
 
 #icon {
     padding: 4px;
+    padding-left: 1px;
 }
 
 .temp {
@@ -92,5 +94,16 @@
 
     #weatherinfo {
         font-size: 1.5rem;
+    }
+}
+@media only screen and (max-width: 600px){
+    
+    .searchdiv{
+        justify-content: center;
+        
+    }
+
+    #input1{
+        width: 70%;
     }
 }
