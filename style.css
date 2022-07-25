@@ -43,6 +43,11 @@
     
 }
 
+.title{
+    margin-bottom: 20px;
+    padding: 2px;
+    font-family:cursive
+}
 #input1 {
     border-radius: 10px;
     padding: 5px;
@@ -94,6 +99,7 @@
 @media only screen and (max-width: 1200px) {
     .mainbox {
         width: 90%;
+        height: auto;
 
     }
 
@@ -107,7 +113,11 @@
     }
 }
 @media only screen and (max-width: 600px){
-    
+    .mainbox {
+        width: 90%;
+        height: auto;
+
+    }
     .searchdiv{
         justify-content: center;
         
